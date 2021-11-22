@@ -4,6 +4,7 @@ import { Divider } from "react-native-elements";
 import { useNavigation } from "@react-navigation/native";
 import Toast from "react-native-easy-toast";
 import LoginForm from "../../components/Account/LoginForm";
+import SocialLogins from "../../components/Account/SocialLogins";
 
 const Login = () => {
   const toastRef = useRef();
@@ -19,7 +20,7 @@ const Login = () => {
         <CreateAccount />
       </View>
       <Divider style={styles.divider} />
-      <Text>Social logins</Text>
+      <SocialLogins toastRef={toastRef} />
       <Toast ref={toastRef} position="center" opacity={0.9} />
     </ScrollView>
   );
